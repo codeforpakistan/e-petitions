@@ -20,10 +20,12 @@ x-application: &application
 
 services:
   postgres:
-    image: postgres:10.16
+    image: postgres:13.3
     restart: always
     ports:
       - "5432:5432"
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
     volumes:
       - db:/var/lib/postgresql/data
 
