@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  constraints Site.constraints_for_public do
+  # constraints Site.constraints_for_public do
     controller 'constituencies' do
       get '/constituencies', action: 'index', as: :constituencies
     end
@@ -100,7 +100,7 @@ Rails.application.routes.draw do
     scope '/images', controller: 'images' do
       get '/:signed_blob_id/:variation_key/*filename', action: 'show', as: :image_proxy
     end
-  end
+  # end
 
   direct :outcome_image do |image, options|
     signed_blob_id = image.blob.signed_id
