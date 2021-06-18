@@ -213,7 +213,7 @@ class SignaturesController < ApplicationController
   end
 
   def signature_params_for_new
-    { location_code: "GB" }
+    { location_code: "PK" }
   end
 
   def signature_params

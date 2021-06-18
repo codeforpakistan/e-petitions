@@ -1,14 +1,8 @@
-<header role="banner" id="global-header">
+<%= link_to(home_path, :title => 'Go to the petitions homepage', :class => 'proposition') do %>
+<header role="banner" id="global-header" style="background-image: image-url('assets/images/graphics/cfp/kpkbanner.jpg')">
   <div class="wrapper">
-    <% if home_page? %>
-      <span class="proposition">
-        <span class="graphic graphic-portcullis-white"></span> Petitions
-      </span>
-    <% else %>
-      <%= link_to(home_path, :title => 'Go to the petitions homepage', :class => 'proposition') do %>
-        <span class="graphic graphic-portcullis-white"></span> Petitions
-      <% end %>
-    <% end %>
-    <p class="strapline">UK Government and Parliament</p>
+    
+    <p class="strapline"></p>
   </div>
 </header>
+<% end %>

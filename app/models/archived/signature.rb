@@ -289,7 +289,7 @@ module Archived
     end
 
     def united_kingdom?
-      location_code == 'GB'
+      location_code == 'PK'
     end
     alias_method :uk?, :united_kingdom?
 

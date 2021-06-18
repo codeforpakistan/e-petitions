@@ -345,7 +345,7 @@ class Signature < ActiveRecord::Base
     end
 
     def uk
-      where(location_code: "GB")
+      where(location_code: "PK")
     end
 
     def unarchived
@@ -767,7 +767,7 @@ class Signature < ActiveRecord::Base
   end
 
   def united_kingdom?
-    location_code == 'GB'
+    location_code == 'PK'
   end
   alias_method :uk?, :united_kingdom?
 

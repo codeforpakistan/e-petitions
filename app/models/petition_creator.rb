@@ -119,7 +119,7 @@ class PetitionCreator
   end
 
   def location_code
-    petition_creator_params[:location_code] || "GB"
+    petition_creator_params[:location_code] || "PK"
   end
 
   def uk_citizenship
