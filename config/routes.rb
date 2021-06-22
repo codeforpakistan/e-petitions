@@ -236,7 +236,7 @@ Rails.application.routes.draw do
         get '/status',   action: 'status'
       end
     end
-  end
+  # end
 
   get 'ping', to: 'ping#ping'
 end
