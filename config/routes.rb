@@ -110,7 +110,7 @@ Rails.application.routes.draw do
     route_for(:image_proxy, signed_blob_id, variation_key, filename, options)
   end
 
-  constraints Site.constraints_for_moderation do
+  # constraints Site.constraints_for_moderation do
     get '/', to: redirect('/admin')
 
     namespace :admin do
