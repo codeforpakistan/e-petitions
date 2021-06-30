@@ -11,6 +11,16 @@ namespace :epets do
      end
   end
 
+  desc "Add custom admin"
+  task :add_sysadmin_user => :environment do
+    if AdminUser.find_by(email: 'admin2@example.com').nil?
+       admin = AdminUser.new(:first_name => 'Cool', :last_name => 'Admin 2', :email => 'admin2@example.com')
+       admin.role = 'sysadmin'
+       admin.password = admin.password_confirmation = 'Letmein1!!'
+       admin.save!
+     end
+  end
+
   desc "Email threshold users with a list of threshold petitions"
   task :threshold_email_reminder => :environment do
     Task.run("epets:threshold_email_reminder") do
