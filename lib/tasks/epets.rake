@@ -12,7 +12,7 @@ namespace :epets do
   end
 
   desc "Add custom admin"
-  task :add_sysadmin_user => :environment do
+  task :add_sysadmin_user2 => :environment do
     if AdminUser.find_by(email: 'admin2@example.com').nil?
        admin = AdminUser.new(:first_name => 'Cool', :last_name => 'Admin 2', :email => 'admin2@example.com')
        admin.role = 'sysadmin'
